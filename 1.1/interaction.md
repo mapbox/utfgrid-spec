@@ -9,24 +9,20 @@ Tile servers can enhance tilesets with interactivity by implementing two additio
 
 Examples:
 
-TMS-style URL schema
-
-    http://example.com/1.0.0/world/0/0/0.png       // tile image for 0/0/0
-    http://example.com/1.0.0/world/0/0/0.grid.json // utfgrid for 0/0/0
-    http://example.com/1.0.0/world/layer.json      // layer manifest
-
 OSM-style URL schema
 
     http://example.com/0/0/0.png       // tile image for 0/0/0
     http://example.com/0/0/0.grid.json // utfgrid for 0/0/0
     http://example.com/layer.json      // layer manifest
 
-## layer.json
+## TileJSON
 
-The layer manifest should provide a JSON object with the following keys:
+UTFGrid requires additions to the [TileJSON](https://github.com/mapbox/tilejson)
+payload for a layer:
 
 * `template`: String. In the format of a mustache template.
-* `legend`: String. Self-contained HTML that may be displayed as a legend for this layer. **Optional**.
+* `legend`: String. Self-contained HTML that may be displayed as a legend for
+  this layer. **Optional**.
 
 Example response from `layer.json`:
 
@@ -37,11 +33,34 @@ Example response from `layer.json`:
 
 Each `layer.json` item should be represented by a single row in the `metadata` table where `key,value` match its key and value in the `layer.json` object.
 
-### template
+### Template
 
 As of UTFGrid 1.1, the `formatter` key is deprecated and replaced by `template`.
-Template is to be a [mustache](http://mustache.github.com/) format string that produces
+Template is to be a [mustache](http://mustache.github.com/) format string that
+produces
 HTML, which will be cleaned with an HTML whitelist after generation.
+
+#### Mustache
+
+Template data is specified according to the
+[mustache specification](http://mustache.github.com/mustache.5.html).
+The full specification is supported, but no partials are provided,
+or should be provided by implementations.
+
+The template structure provides a section based on each format
+option. For instance, a formatter:
+
+
+    {{#location}}
+        http://your.com/{{id}}
+    {{/location}}
+    {{#full}}
+        This content has the id {{id}}
+    {{/full}}
+    {{#teaser}}
+        {{id}}
+    {{/teaser}}
+
 
 ### legend
 

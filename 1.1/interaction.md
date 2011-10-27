@@ -47,19 +47,50 @@ Template data is specified according to the
 The full specification is supported, but no partials are provided,
 or should be provided by implementations.
 
-The template structure provides a section based on each format
-option. For instance, a formatter:
+Given the switch to templates from formatters, the `options` object
+is no longer available. Its functionality is emulated by setting
+'format flags' on each data object.
+
+For an example data object like
 
 
-    {{#location}}
+    {
+        "id": "helloworld"
+    }
+
+
+This will be transformed into
+
+
+    {
+        "id": "helloworld"
+        "__location__": true
+    }
+
+
+By the tooltip/interaction implementation, in order to trigger
+the `location` template. Note that `true`, `1`, and all non-false
+values are equal to template, so implementations may set
+`"__location__": 1` to save bytes.
+
+The template implementation could be:
+
+
+    {{#__location__}}
         http://your.com/{{id}}
-    {{/location}}
-    {{#full}}
+    {{/__location__}}
+    {{#__full__}}
         This content has the id {{id}}
-    {{/full}}
-    {{#teaser}}
+    {{/__full__}}
+    {{#__teaser__}}
         {{id}}
-    {{/teaser}}
+    {{/__teaser__}}
+
+
+Which, for this implementation, will produce the output
+
+
+    http://your.com/helloworld
 
 
 ### legend

@@ -7,7 +7,6 @@ its own repository.
 
 See CHANGELOG.md for per-version changes.
 
-
 ## License
 
 This specification is licensed under a [Creative Commons Attribution 3.0 United States License](http://creativecommons.org/licenses/by/3.0/us/).

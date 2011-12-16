@@ -12,6 +12,8 @@ See CHANGELOG.md for per-version changes.
 The [Visible Map demo](http://mapbox.com/demo/visiblemap/) is an example of
 client-side interaction using UTFGrid encoded features.
 
+[Glower](https://github.com/mapbox/glower) shows how to do feature highlighting.
+
 Mapnik's [grid_renderer](https://github.com/mapnik/mapnik/tree/master/include/mapnik/grid)
 is an example of code that can encode spatial features into UTFGrid.
 

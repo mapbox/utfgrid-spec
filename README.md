@@ -7,6 +7,14 @@ its own repository.
 
 See CHANGELOG.md for per-version changes.
 
+## Examples
+
+The [Visible Map demo](http://mapbox.com/demo/visiblemap/) is an example of
+client-side interaction using UTFGrid encoded features.
+
+Mapnik's [grid_renderer](https://github.com/mapnik/mapnik/tree/master/include/mapnik/grid)
+is an example of code that can encode spatial features into UTFGrid.
+
 ## License
 
 This specification is licensed under a [Creative Commons Attribution 3.0 United States License](http://creativecommons.org/licenses/by/3.0/us/).
@@ -19,3 +27,4 @@ Applications which make use of the specification are not subject to any restrict
 * Will White (willwhite)
 * Konstantin Kaefer (kkaefer)
 * Justin Miller (incanus)
+* Dane Springmeyer (springmeyer)

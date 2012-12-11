@@ -27,7 +27,7 @@ payload for a layer:
 Example response from `layer.json`:
 
     {
-        "formatter": "{{NAME}}",
+        "template": "{{NAME}}",
         "legend": "<strong>Countries of the World</strong>"
     }
 

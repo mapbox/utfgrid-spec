@@ -17,7 +17,7 @@ OSM-style URL schema
 
 ## TileJSON
 
-UTFGrid requires additions to the [TileJSON](https://github.com/mapbox/tilejson)
+UTFGrid requires additions to the [TileJSON](https://github.com/mapbox/tilejson-spec)
 payload for a layer:
 
 * `template`: String. In the format of a mustache template.

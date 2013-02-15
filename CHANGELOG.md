@@ -1,3 +1,9 @@
+## 1.3
+
+* Adjusts default resolution to 4 from 2
+* Improves Javascript validation example for variable-resolution grids
+* Rewords sections to accomodate variable-dpi tiles.
+
 ## 1.2
 
 * Deprecates the `formatter` option and adds `template`, a replacement

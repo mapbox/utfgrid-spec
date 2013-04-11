@@ -201,7 +201,7 @@ for (var y = 0; y < dimension; y++) {
         if (code >= 35) code--;
         code -= 32;
 
-        assert(code == key) {
+        assert(code == key);
 
         if (key < 65501) key++;
     }

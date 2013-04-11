@@ -243,7 +243,7 @@ for (var y = 0; y < 256; y++) {
         if (code >= 35) code--;
         code -= 32;
 
-        assert(code == key) {
+        assert(code == key);
 
         if (key < 65501) key++;
     }

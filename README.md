@@ -18,7 +18,7 @@ Applications which make use of the specification are not subject to any restrict
 ### Write
 
 * Mapnik's [grid_renderer](https://github.com/mapnik/mapnik/wiki/MapnikRenderers#grid_renderer) (Uses Antigrain Geometry library for rendering).
-* Various python sample implementations: [[https://github.com/springmeyer/utfgrid-example-writers]]
+* [Various python sample implementations](https://github.com/springmeyer/utfgrid-example-writers)
 * GeoScript [groovy example](https://github.com/jericks/geoscript-groovy/blob/master/examples/utfgrid.groovy)
 * [TileStache](http://tilestache.org/)
 * [create-utfgrids](https://github.com/Ecotrust/create-utfgrids)
@@ -28,8 +28,8 @@ Applications which make use of the specification are not subject to any restrict
 * Wax for adding support to the Leaflet, Modest Maps, OpenLayers, and Google Maps clients: [examples](http://mapbox.com/wax/interaction-mm.html), [code](https://github.com/mapbox/wax/blob/master/control/lib/gridinstance.js)
 * [Leaflet.utfgrid](https://github.com/danzel/Leaflet.utfgrid)
 * OpenLayers Native: [blog post](http://www.perrygeo.net/wordpress/?p=160), [general demo](http://openlayers.org/dev/examples/utfgrid.html), [example multi-grid](http://openlayers.org/dev/examples/utfgrid_twogrids.html), [example geography-class](http://openlayers.org/dev/examples/utfgrid-geography-class.html)
-* GDAL MBTiles support: [[http://www.gdal.org/frmt_mbtiles.html]]
-* landez : [[https://github.com/makinacorpus/landez]] (``landez.reader`` python module)
+* [GDAL MBTiles support](http://www.gdal.org/frmt_mbtiles.html)
+* [Landez - Python module](https://github.com/makinacorpus/landez)
 
 ### Servers
 
